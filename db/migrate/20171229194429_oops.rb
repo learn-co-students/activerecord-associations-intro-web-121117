@@ -1,4 +1,10 @@
-class CreateSongs < ActiveRecord::Migration[5.0]
+class Oops < ActiveRecord::Migration[5.1]
+  def change
+    create_table :genres do |t|
+      t.string :name
+    end
+  end
+
   def change
     create_table :songs do |t|
       t.string :name
@@ -6,4 +12,6 @@ class CreateSongs < ActiveRecord::Migration[5.0]
       t.integer :genre_id
     end
   end
+
+
 end
